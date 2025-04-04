@@ -1,5 +1,4 @@
 import React from 'react';
-import { User } from 'lucide-react';
 
 interface TeamMemberProps {
   name: string;
@@ -7,10 +6,28 @@ interface TeamMemberProps {
 }
 
 const TeamMember = ({ name, role }: TeamMemberProps) => {
+  // Generate a unique gaming-themed profile picture for each team member
+  const getProfileImage = (name: string) => {
+    const images = [
+      '/images/team/bob.png?w=300&h=300&fit=crop',
+      '/images/team/jj.png?w=300&h=300&fit=crop',
+      '/images/team/seetang.jpeg?w=300&h=300&fit=crop',
+      '/images/team/andre.png?w=300&h=300&fit=crop'
+    ];
+    
+    // Use name to consistently get the same image for each team member
+    const index = name.charCodeAt(0) % images.length;
+    return images[index];
+  };
+
   return (
     <div className="group relative flex flex-col items-center">
-      <div className="bg-[#2E2E44] p-4 rounded-full mb-2">
-        <User className="w-12 h-12 text-purple-400" />
+      <div className="w-24 h-24 rounded-full overflow-hidden mb-2 ring-4 ring-purple-400 ring-opacity-50">
+        <img
+          src={getProfileImage(name)}
+          alt={`${name}'s profile`}
+          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-200"
+        />
       </div>
       
       {/* Hover Information */}

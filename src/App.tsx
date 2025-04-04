@@ -16,10 +16,10 @@ function App() {
   ];
 
   const teamMembers = [
-    { name: 'Alex', role: 'Admin' },
-    { name: 'Sarah', role: 'Moderator' },
-    { name: 'Mike', role: 'Community Manager' },
-    { name: 'Lisa', role: 'Support' },
+    { name: 'bob', role: 'Admin / Developer' },
+    { name: 'Thx4TheExp', role: 'Admin' },
+    { name: 'Azrael', role: 'Admin' },
+    { name: 'Jupp / Andre', role: 'Admin' },
   ];
 
   const currentYear = new Date().getFullYear();
@@ -36,8 +36,12 @@ function App() {
       <header className="bg-[#2E2E44] shadow-lg">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2">
-              <GamepadIcon className="w-8 h-8 text-purple-400" />
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/images/logo.png?w=100&h=100&fit=crop"
+                alt="Button Crew Logo"
+                className="w-10 h-10 rounded-lg object-cover"
+              />
               <span className="text-xl font-bold">Button Crew</span>
             </div>
             

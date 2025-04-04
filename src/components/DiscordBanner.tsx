@@ -28,7 +28,7 @@ const DiscordBanner = () => {
       {/* Discord Widget */}
       <div className="flex justify-center">
         <iframe 
-          src="https://discord.com/widget?id=1216445566449393674&theme=dark"
+          src="https://discord.com/widget?id=710889307610546228&&theme=dark"
           width="350" 
           height="500" 
           frameBorder="0" 
